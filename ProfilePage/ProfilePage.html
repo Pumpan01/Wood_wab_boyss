@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+  </style>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#fff] flex flex-col min-h-screen">
+    <nav class="w-full h-[60px] bg-[#1D232A]">
+        <div class="container mx-auto flex justify-between items-center gap-5">
+            <div class="flex justify-center items-center w-auto h-auto gap-5">
+                <img src="../public/image.png" alt="" class="w-[50px] h-auto">
+                <div>
+                    <span class="text-[#fff] text-xl">ระบบสารสนเทศบุคลากร</span>
+                    <p class="text-[#fff]">คณะอักษรศาสตร์ มหาวิทยาลัยศิลปากร</p>
+                </div>
+            </div>
+            <ul class="flex gap-5">
+                <li class="text-[#fff]">
+                    <a href="../MainPage/MainPage.html" class="btn btn-ghost normal-case text-md">หน้าแรก</a>
+                </li>
+                <li class="text-[#fff]">
+                    <a href="../ProfilePage/ProfilePage.html" class="btn btn-ghost normal-case text-md">โปรไฟล์</a>
+                </li>
+                <li class="text-[#fff]">
+                    <a href="../index.html" class="btn btn-ghost normal-case text-md">ออกจากระบบ</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main class="flex-1 max-w-screen-lg mx-auto mt-20">
+        <div class="h-full">
+            <div class="border-b-2 block md:flex">
+                <div class="w-full md:w-2/5 p-4 sm:p-6 lg:p-8 bg-white shadow-md">
+                    <div class="flex justify-between">
+                        <span class="text-xl font-semibold block">Profile</span>
+                        <a href="#"
+                            class="-mt-2 text-md font-bold text-white bg-gray-700 rounded-full px-5 py-2 hover:bg-gray-800">Edit</a>
+                    </div>
+                    <span class="text-gray-600">This information is secret so be careful</span>
+                    <div class="w-full p-8 mx-2 flex justify-center">
+                        <img id="showImage" class="max-w-xs w-32 items-center border" src="../public/profile.png"
+                            alt="">
+                    </div>
+                </div>
+                <div class="w-full md:w-3/5 p-8 bg-white lg:ml-4 shadow-md">
+                    <div class="rounded  shadow p-6">
+                        <div class="pb-6">
+                            <label for="name" class="font-semibold text-gray-700 block pb-1">Name</label>
+                            <div class="flex">
+                                <input id="username" class="border-1 rounded-r px-4 py-2 w-full" type="text"
+                                    value="John Onyx" />
+                            </div>
+                        </div>
+                        <div class="pb-6">
+                            <label for="name" class="font-semibold text-gray-700 block pb-1">Username</label>
+                            <div class="flex">
+                                <input id="username" class="border-1 rounded-r px-4 py-2 w-full" type="text"
+                                    value="Username" />
+                            </div>
+                        </div>
+                        <div class="pb-4">
+                            <label for="about" class="font-semibold text-gray-700 block pb-1">Email</label>
+                            <input disabled id="email" class="border-1  rounded-r px-4 py-2 w-full" type="email"
+                                value="example@example.com" />
+                        </div>
+                        <div class="pb-6">
+                            <label for="name" class="font-semibold text-gray-700 block pb-1">Phone</label>
+                            <div class="flex">
+                                <input id="username" class="border-1 rounded-r px-4 py-2 w-full" type="text"
+                                    value="+66" />
+                            </div>
+                            <span class="text-gray-600 pt-4 block opacity-70">Personal login information of your
+                                account</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer p-10 bg-base-200 text-base-content">
+        <div>
+            <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+                clip-rule="evenodd" class="fill-current">
+                <path
+                    d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z">
+                </path>
+            </svg>
+            <p>ACME Industries Ltd.<br />Providing reliable tech since 1992</p>
+        </div>
+        <div>
+            <span class="footer-title">Services</span>
+            <a class="link link-hover">Branding</a>
+            <a class="link link-hover">Design</a>
+            <a class="link link-hover">Marketing</a>
+            <a class="link link-hover">Advertisement</a>
+        </div>
+        <div>
+            <span class="footer-title">Company</span>
+            <a class="link link-hover">About us</a>
+            <a class="link link-hover">Contact</a>
+            <a class="link link-hover">Jobs</a>
+            <a class="link link-hover">Press kit</a>
+        </div>
+        <div>
+            <span class="footer-title">Legal</span>
+            <a class="link link-hover">Terms of use</a>
+            <a class="link link-hover">Privacy policy</a>
+            <a class="link link-hover">Cookie policy</a>
+        </div>
+    </footer>
+</body>
+
+</html>
